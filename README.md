@@ -6,7 +6,7 @@
 - [junsong96](https://www.acmicpc.net/workbook/by/junsong96)
 - [coy](https://www.acmicpc.net/workbook/by/coy)
 
-## 진행 방법
+## 풀이 진행 방법
 
 - `BeforeReview` 브랜치에서 `본인영문이름(성제외)` 으로 브랜치를 생성하여 진행해주세요.
 - 해당 브랜치에서 `본인영문이름(성제외)` 디렉토리를 생성하여 진행해주세요.<br>
@@ -15,3 +15,10 @@
 - 답안 저장 후 `CompleteReview` 브랜치로 `pull request`를 날려주세요.
 - `pull request` 타이틀은 `01주차 - {본인이름(한글)}` 형식으로 작성해주세요. (`ex. 01주차 - 신용호`)
 - `pull request` 본문은 템플릿에 맞춰 작성해주세요.
+- `Assignees`에 본인, `Reviewers`에 다른 스터디원들을 추가해주세요.
+
+## 리뷰 진행 방법
+
+- 스터디원들의 'pull request`를 확인하여 `review`를 진행해주세요.
+- `Pull requests` 탭에서 `PR`을 눌러보면 `Files changed` 탭에서 작성한 코드 확인이 가능합니다.
+- 관련된 코드 부분에 적절한 코멘트를 남겨주시고 `viewed`로 확인 여부를 체크해주세요.
