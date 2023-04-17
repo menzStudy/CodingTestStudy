@@ -19,6 +19,6 @@
 
 ## 리뷰 진행 방법
 
-- 스터디원들의 'pull request`를 확인하여 `review`를 진행해주세요.
+- 스터디원들의 `pull request`를 확인하여 `review`를 진행해주세요.
 - `Pull requests` 탭에서 `PR`을 눌러보면 `Files changed` 탭에서 작성한 코드 확인이 가능합니다.
 - 관련된 코드 부분에 적절한 코멘트를 남겨주시고 `viewed`로 확인 여부를 체크해주세요.
