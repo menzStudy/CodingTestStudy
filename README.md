@@ -2,8 +2,8 @@
 코딩 테스트 스터디 진행용 리포
 
 ## BOJ 문제집 링크
+- [junsong96](https://www.acmicpc.net/workbook/by/junsong96) -> 여기에서 주차별로 5문제씩 진행하기로 결정
 - [BaaaaaaaaaaarkingDog](https://www.acmicpc.net/workbook/by/BaaaaaaaaaaarkingDog)
-- [junsong96](https://www.acmicpc.net/workbook/by/junsong96)
 - [coy](https://www.acmicpc.net/workbook/by/coy)
 
 ## 풀이 진행 방법
