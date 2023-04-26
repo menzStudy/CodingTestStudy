@@ -6,36 +6,32 @@ import java.util.StringTokenizer;
 public class _1978_ {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
 
-        while (true) {
-            int n = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
 
-            if(n == 0) break;
-
-            int cnt = primeCheck(n, n * 2);
-
-            sb.append(cnt).append('\n');
-        }
-
-        System.out.println(sb);
-
-    }
-
-    private static int primeCheck(int n, int m) {
         int cnt = 0;
-        for (int i = n + 1; i <= m; i++) {
+
+        StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+        for (int i = 0; i < N; i++) {
             boolean isPrime = true;
-            if(i == 1) continue;
-            for (int j = 2; j <= Math.sqrt(i); j++) {
-                if(i % j == 0) {
+            int num = Integer.parseInt(st.nextToken());
+
+            if(num == 1) continue;
+
+            for (int j = 2; j <= Math.sqrt(num); j++) {
+                if(num % j == 0) {
                     isPrime = false;
                     break;
                 }
             }
-            if(isPrime) cnt++;
+
+            if(isPrime) {
+                cnt++;
+            }
         }
 
-        return cnt;
+        System.out.println(cnt);
+
     }
 }
