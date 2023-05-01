@@ -1,9 +1,11 @@
+package menz.study.week01.YongHo;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import java.util.Arrays;
 
-public class Main {
+public class _4948_ {
   private static boolean[] prime = new boolean[123_456 * 2 + 1];
   static {
     Arrays.fill(prime, true);

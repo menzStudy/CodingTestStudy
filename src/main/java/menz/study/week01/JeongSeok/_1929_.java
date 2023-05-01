@@ -1,3 +1,5 @@
+package menz.study.week01.JeongSeok;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
