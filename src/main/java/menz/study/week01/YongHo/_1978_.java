@@ -1,13 +1,20 @@
-import java.io.*;
-import java.util.*;
+package menz.study.week01.YongHo;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class _1978_ {
-  public static void main(String[] args) throws Exception {
+  public static void main (String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
     boolean[] prime = new boolean[1001];
     
-    Arrays.fill(prime, true);
+    Arrays.fill(
+        prime,
+        true
+    );
     
     prime[0] = false;
     prime[1] = false;
@@ -25,11 +32,14 @@ public class _1978_ {
     
     int N = Integer.parseInt(br.readLine());
     
-    StringTokenizer st = new StringTokenizer(br.readLine(),  " ");
+    StringTokenizer st = new StringTokenizer(
+        br.readLine(),
+        " "
+    );
     
     int answer = 0;
     
-    while(st.hasMoreTokens()) {
+    while (st.hasMoreTokens()) {
       if (prime[Integer.parseInt(st.nextToken())]) {
         answer++;
       }

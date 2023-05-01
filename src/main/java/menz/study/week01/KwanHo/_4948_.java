@@ -1,10 +1,9 @@
-package KwanHo;
+package menz.study.week01.KwanHo;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 import java.util.Arrays;
-import java.util.StringTokenizer;
 
 public class _4948_ {
     private static boolean[] prime = new boolean[123_456 * 2 + 1];

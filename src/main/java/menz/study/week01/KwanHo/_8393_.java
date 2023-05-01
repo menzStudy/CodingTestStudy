@@ -1,4 +1,4 @@
-package KwanHo;
+package menz.study.week01.KwanHo;
 
 import java.util.Scanner;
 

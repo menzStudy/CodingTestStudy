@@ -2,13 +2,16 @@ package menz.study.week01.YongHo;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 import java.util.Arrays;
 
 public class _4948_ {
   private static boolean[] prime = new boolean[123_456 * 2 + 1];
+  
   static {
-    Arrays.fill(prime, true);
+    Arrays.fill(
+        prime,
+        true
+    );
     prime[0] = false;
     prime[1] = false;
     
@@ -22,14 +25,14 @@ public class _4948_ {
     }
   }
   
-  public static void main(String[] args) throws Exception {
+  public static void main (String[] args) throws Exception {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
     StringBuilder sb = new StringBuilder();
     
     int N = Integer.parseInt(br.readLine());
     
-    while(N != 0) {
+    while (N != 0) {
       int answer = 0;
       for (int i = N + 1; i <= 2 * N; i++) {
         if (prime[i]) {
@@ -37,7 +40,8 @@ public class _4948_ {
         }
       }
       
-      sb.append(answer).append('\n');
+      sb.append(answer)
+        .append('\n');
       
       N = Integer.parseInt(br.readLine());
     }
