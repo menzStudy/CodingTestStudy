@@ -1,3 +1,5 @@
+package KwanHo;
+
 import java.util.Scanner;
 
 public class _8393_ {
