@@ -25,4 +25,6 @@
 
 ## 리뷰 완료 후
 
-- `BeforeReview` 브랜치에서 모든 `PR`이 승인되면 `CompleteReview`브랜치에 `Merge`됩니다.
+- `PR` 리뷰가 완료되면 `Squash and merge`를 선택하고, 메세지 수정 없이 `BeforeReview` 브랜치에 `merge` 해주세요.
+- `Merge` 후에 개별 브랜치는 삭제하시고 로컬에 클론되어 있는 `BeforeReview` 브랜치를 업데이트 해주세요.
+- 업데이트 후 `BeforeReview`에서 개별 브랜치를 재생성하고 다음 회차를 진행해주세요.
