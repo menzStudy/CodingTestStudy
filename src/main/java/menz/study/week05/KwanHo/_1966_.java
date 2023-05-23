@@ -1,4 +1,4 @@
-package menz.study.week05;
+package menz.study.week05.KwanHo;
 
 import java.io.BufferedReader;
 import java.io.IOException;
