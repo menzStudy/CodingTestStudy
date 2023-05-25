@@ -20,7 +20,6 @@ public class _9461_ {
 
 		for (int i = 3; i <= MAX_LENGTH; i++) {
 			dp[i] = dp[i - 2] + dp[i - 3];
-			System.out.println(i + " : " + dp[i]);
 		}
 
 		while (T-- > 0) {
