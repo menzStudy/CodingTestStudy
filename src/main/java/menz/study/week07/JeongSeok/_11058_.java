@@ -11,7 +11,7 @@ public class _11058_ {
 
 		int N = Integer.parseInt(br.readLine());
 		
-		int[] dp = new int[N + 1];
+		long[] dp = new long[N + 1];
 
 		for (int i = 1; i <= 6; i++) {
 			dp[i] = i;
