@@ -43,6 +43,7 @@ public class _2589_ {
           visited = new boolean[ROW][COL];
           distance = new int[ROW][COL];
           visited[r][c] = true;
+          distance[r][c] = 0;
           queue.offer(new int[] { r, c });
 
           while (!queue.isEmpty()) {
