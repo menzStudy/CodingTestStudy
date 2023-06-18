@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -32,8 +31,6 @@ public class _16234_ {
         A[r][c] = Integer.parseInt(st.nextToken());
       }
     }
-
-    Arrays.stream(A).forEach(row -> System.out.println(Arrays.toString(row)));
 
     boolean[][] visited;
     Queue<int[]> queue;
@@ -86,8 +83,6 @@ public class _16234_ {
           }
         }
       }
-
-      Arrays.stream(A).forEach(row -> System.out.println(Arrays.toString(row)));
 
       if (startMove) {
         moveCnt++;
