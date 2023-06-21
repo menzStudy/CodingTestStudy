@@ -47,6 +47,8 @@ public class _2146_ {
 
   private static int findMinDistance(Map<Integer, Queue<int[]>> startMap) {
     int minDistance = Integer.MAX_VALUE;
+
+    loop:
     for (int key : startMap.keySet()) {
       boolean[][] visited = new boolean[N][N];
       int[][] distance = new int[N][N];
@@ -79,8 +81,9 @@ public class _2146_ {
             continue;
           }
 
-          if (minDistance > distance[cur[0]][cur[1]])
-            minDistance = distance[cur[0]][cur[1]];
+          if (minDistance > distance[cur[0]][cur[1]]) minDistance = distance[cur[0]][cur[1]];
+
+          continue loop;
         }
       }
     }
