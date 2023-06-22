@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class _2234_ {
-  private static final int[][] dirs = new int[][] {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+  private static final int[][] dirs = new int[][] {{0, -1}, {-1, 0}, {0, 1}, {1, 0}};
 
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -15,15 +15,14 @@ public class _2234_ {
     int M = Integer.parseInt(st.nextToken());
     int N = Integer.parseInt(st.nextToken());
 
-    String[][] map = new String[N][M];
+    int[][] map = new int[N][M];
     int[][] roomMap = new int[N][M];
     PriorityQueue<Integer> pq = new PriorityQueue<>((i1, i2) -> Integer.compare(i2, i1));
 
     for (int r = 0; r < N; r++) {
       st = new StringTokenizer(br.readLine(), " ");
       for (int c = 0; c < M; c++) {
-        int num = Integer.parseInt(st.nextToken());
-        map[r][c] = String.format("%04d", Integer.parseInt(Integer.toBinaryString(num)));
+        map[r][c] = Integer.parseInt(st.nextToken());
       }
     }
 
@@ -46,32 +45,19 @@ public class _2234_ {
             int row = cur[0];
             int col = cur[1];
 
-            // S, 남 : row + 1
-            if (map[row][col].charAt(0) == '0' && row + 1 < N && roomMap[row + 1][col] == 0) {
-              size++;
-              roomMap[row + 1][col] = roomCnt;
-              queue.offer(new int[] {row + 1, col});
-            }
+            for (int idx = 0; idx < dirs.length; idx++) {
+              if ((map[row][col] & (1 << idx)) == 0) {
+                int nextR = row + dirs[idx][0];
+                int nextC = col + dirs[idx][1];
 
-            // E, 동 : c + 1
-            if (map[row][col].charAt(1) == '0' && col + 1 < M && roomMap[row][col + 1] == 0) {
-              size++;
-              roomMap[row][col + 1] = roomCnt;
-              queue.offer(new int[] {row, col + 1});
-            }
+                if (nextR < 0 || nextC < 0 || nextR >= N || nextC >= M) continue;
 
-            // N, 북 : row - 1
-            if (map[row][col].charAt(2) == '0' && row - 1 >= 0 && roomMap[row - 1][col] == 0) {
-              size++;
-              roomMap[row - 1][col] = roomCnt;
-              queue.offer(new int[] {row - 1, col});
-            }
-
-            // W, 서 : c - 1
-            if (map[row][col].charAt(3) == '0' && col - 1 >= 0 && roomMap[row][col - 1] == 0) {
-              size++;
-              roomMap[row][col - 1] = roomCnt;
-              queue.offer(new int[] {row, col - 1});
+                if (roomMap[nextR][nextC] == 0) {
+                  size++;
+                  roomMap[nextR][nextC] = roomCnt;
+                  queue.offer(new int[] {nextR, nextC});
+                }
+              }
             }
           }
 
