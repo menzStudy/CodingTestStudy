@@ -26,11 +26,7 @@ public class KeepDistanceChecker {
         }
       }
 
-      if (check(roomMap)) {
-        answer[room] = 1;
-      } else {
-        answer[room] = 0;
-      }
+      if (check(roomMap)) answer[room] = 1;
     }
 
     return answer;
