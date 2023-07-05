@@ -37,12 +37,12 @@ public class _4485_ {
     }
 
     private static int dijkstra(int startCost) {
-        PriorityQueue<Person> pq = new PriorityQueue<>((x, y) -> x.cost - y.cost);
-        pq.add(new Person(0, 0, startCost));
+        PriorityQueue<_4485_Person> pq = new PriorityQueue<>((x, y) -> x.cost - y.cost);
+        pq.add(new _4485_Person(0, 0, startCost));
         visited[0][0] = true;
 
         while (!pq.isEmpty()) {
-            Person cur = pq.poll();
+            _4485_Person cur = pq.poll();
             if(cur.x == N - 1 && cur.y == N - 1) {
                 return cur.cost;
             }
@@ -55,7 +55,7 @@ public class _4485_ {
                         ny >= N || visited[nx][ny]) continue;
 
                 visited[nx][ny] = true;
-                pq.offer(new Person(nx, ny, cur.cost + map[nx][ny]));
+                pq.offer(new _4485_Person(nx, ny, cur.cost + map[nx][ny]));
             }
         }
 
@@ -63,10 +63,10 @@ public class _4485_ {
     }
 }
 
-class Person {
+class _4485_Person {
     int x,y,cost;
 
-    public Person(int x, int y, int cost) {
+    public _4485_Person(int x, int y, int cost) {
         this.x = x;
         this.y = y;
         this.cost = cost;

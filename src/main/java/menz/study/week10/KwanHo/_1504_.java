@@ -8,7 +8,7 @@ import java.util.*;
 class _1504_ {
     static int V;
     static int E;
-    static List<Edge>[] edgeFrom;
+    static List<_1504_Edge>[] edgeFrom;
     static final int INF = 200_000_000;
 
     public static void main(String[] args) throws IOException {
@@ -26,8 +26,8 @@ class _1504_ {
             int node1 = Integer.parseInt(st.nextToken());
             int node2 = Integer.parseInt(st.nextToken());
             int cost = Integer.parseInt(st.nextToken());
-            edgeFrom[node1].add(new Edge(node2, cost));
-            edgeFrom[node2].add(new Edge(node1, cost));
+            edgeFrom[node1].add(new _1504_Edge(node2, cost));
+            edgeFrom[node2].add(new _1504_Edge(node1, cost));
         }
 
         st = new StringTokenizer(br.readLine());
@@ -43,18 +43,18 @@ class _1504_ {
     }
 
     public static int dijkstra(int start, int target) {
-        PriorityQueue<Edge> pq = new PriorityQueue<>();
+        PriorityQueue<_1504_Edge> pq = new PriorityQueue<>();
         int[] dist = new int[V];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[start] = 0;
 
-        pq.offer(new Edge(start, 0));
+        pq.offer(new _1504_Edge(start, 0));
 
         while(!pq.isEmpty()) {
-            Edge cur = pq.poll();
+            _1504_Edge cur = pq.poll();
             int v = cur.vertex;
 
-            for (Edge next : edgeFrom[v]) {
+            for (_1504_Edge next : edgeFrom[v]) {
                 if (dist[next.vertex] > dist[v] + next.cost) {
                     dist[next.vertex] = dist[v] + next.cost;
                     pq.offer(next);
@@ -65,17 +65,17 @@ class _1504_ {
     }
 }
 
-class Edge implements Comparable<Edge> {
+class _1504_Edge implements Comparable<_1504_Edge> {
     int vertex;
     int cost;
 
-    Edge(int vertex, int cost) {
+    _1504_Edge(int vertex, int cost) {
         this.vertex = vertex;
         this.cost = cost;
     }
 
     @Override
-    public int compareTo(Edge edge) {
+    public int compareTo(_1504_Edge edge) {
         return this.cost - edge.cost;
     }
 }

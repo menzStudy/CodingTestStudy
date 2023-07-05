@@ -17,21 +17,21 @@ public class _1753_ {
 
         int start = Integer.parseInt(br.readLine());
 
-        ArrayList<ArrayList<Node>> graph = new ArrayList<>();
+        ArrayList<ArrayList<_1753_Node>> graph = new ArrayList<>();
         for (int i = 0; i <= V; i++) {
             graph.add(i, new ArrayList<>());
         }
 
         for (int i = 0; i < E; i++) {
             st = new StringTokenizer(br.readLine(), " ");
-            graph.get(Integer.parseInt(st.nextToken())).add(new Node(
+            graph.get(Integer.parseInt(st.nextToken())).add(new _1753_Node(
                     Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())));
         }
 
         dijkstra(start, graph);
     }
 
-    private static void dijkstra(int start, ArrayList<ArrayList<Node>> graph) {
+    private static void dijkstra(int start, ArrayList<ArrayList<_1753_Node>> graph) {
         int[] dist = new int[V + 1];
 
         for (int i = 1; i < V + 1; i++) {
@@ -39,22 +39,22 @@ public class _1753_ {
         }
         dist[start] = 0;
 
-        PriorityQueue<Node> pq = new PriorityQueue<>((x, y) -> x.weight - y.weight);
-        pq.offer(new Node(start, 0));
+        PriorityQueue<_1753_Node> pq = new PriorityQueue<>((x, y) -> x.weight - y.weight);
+        pq.offer(new _1753_Node(start, 0));
 
         while (!pq.isEmpty()) {
-            Node cur = pq.poll();
+            _1753_Node cur = pq.poll();
 
             if(dist[cur.to] < cur.weight) {
                 continue;
             }
 
             for (int i = 0; i < graph.get(cur.to).size(); i++) {
-                Node adjNode = graph.get(cur.to).get(i);
+                _1753_Node adjNode = graph.get(cur.to).get(i);
 
                 if(dist[adjNode.to] > cur.weight + adjNode.weight) {
                     dist[adjNode.to] = cur.weight + adjNode.weight;
-                    pq.offer(new Node(adjNode.to, dist[adjNode.to]));
+                    pq.offer(new _1753_Node(adjNode.to, dist[adjNode.to]));
                 }
             }
         }
@@ -69,11 +69,11 @@ public class _1753_ {
     }
 }
 
-class Node {
+class _1753_Node {
     int to;
     int weight;
 
-    public Node(int to, int weight) {
+    public _1753_Node(int to, int weight) {
         this.to = to;
         this.weight = weight;
     }

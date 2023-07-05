@@ -23,12 +23,12 @@ public class _13549_ {
     }
 
     private static int bfs(int n, int k) {
-        Queue<Person> q = new LinkedList<>();
-        q.add(new Person(n, 0));
+        Queue<_13549_Person> q = new LinkedList<>();
+        q.add(new _13549_Person(n, 0));
         int min = Integer.MAX_VALUE;
 
         while (!q.isEmpty()) {
-            Person cur = q.poll();
+            _13549_Person cur = q.poll();
             positionMap[cur.pos] = true;
 
            if(cur.pos == k) {
@@ -36,15 +36,15 @@ public class _13549_ {
            }
 
            if(cur.pos * 2 <= max && !positionMap[cur.pos * 2]) {
-               q.offer(new Person(cur.pos * 2, cur.sec));
+               q.offer(new _13549_Person(cur.pos * 2, cur.sec));
            }
 
             if (cur.pos + 1 <= max && !positionMap[cur.pos + 1]) {
-                q.offer(new Person(cur.pos + 1, cur.sec + 1));
+                q.offer(new _13549_Person(cur.pos + 1, cur.sec + 1));
             }
 
             if (cur.pos - 1 >= 0 && !positionMap[cur.pos - 1]) {
-                q.offer(new Person(cur.pos - 1, cur.sec + 1));
+                q.offer(new _13549_Person(cur.pos - 1, cur.sec + 1));
             }
         }
 
@@ -52,10 +52,10 @@ public class _13549_ {
     }
 }
 
-class Person {
+class _13549_Person {
     int pos, sec;
 
-    public Person(int pos, int sec) {
+    public _13549_Person(int pos, int sec) {
         this.pos = pos;
         this.sec = sec;
     }
