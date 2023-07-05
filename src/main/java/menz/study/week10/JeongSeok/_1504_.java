@@ -8,17 +8,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
-
-class Node {
-  int v;
-  int cost;
-
-  public Node(int v, int cost) {
-    this.v = v;
-    this.cost = cost;
-  }
-}
-
 public class _1504_ {
 
   static int N, E;

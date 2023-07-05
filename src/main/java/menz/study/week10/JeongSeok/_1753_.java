@@ -8,15 +8,6 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-class Node {
-	int v;
-	int cost;
-
-	public Node(int v, int cost) {
-		this.v = v;
-		this.cost = cost;
-	}
-}
 public class _1753_ {
 
 	//각 노드에 연결되어 있는 노드에 대한 정보를 담는 리스트
