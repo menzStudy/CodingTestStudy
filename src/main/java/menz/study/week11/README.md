@@ -14,12 +14,12 @@
 
 - [2805번 - 나무 자르기](https://www.acmicpc.net/problem/2805)
 - [2512번 - 예산](https://www.acmicpc.net/problem/2512)
-- 
+ 
 ### **목** (07/06)
 
 - [19637번 - IF문 좀 대신 써줘](https://www.acmicpc.net/problem/19637)
 - [11663번 - 선분 위의 점](https://www.acmicpc.net/problem/11663)
-- 
+ 
 ### **금** (07/07)
 
 - [2110번 - 공유기 설치](https://www.acmicpc.net/problem/2110)
